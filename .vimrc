@@ -20,6 +20,7 @@ NeoBundle 'scrooloose/syntastic.git' "syntaxチェッカー
 NeoBundle "ctrlpvim/ctrlp.vim" "ファイル検索
 NeoBundle 'tell-k/vim-browsereload-mac' "browserのreload
 NeoBundle 'nathanaelkane/vim-indent-guides' "インデントの深さを可視化
+NeoBundle 'thoughtbot/vim-rspec' "rspec syntax
 
 call neobundle#end()
 
