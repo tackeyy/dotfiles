@@ -713,6 +713,8 @@ unite-filter-converter_relative_word	unite.txt	/*unite-filter-converter_relative
 unite-filter-converter_smart_path	unite.txt	/*unite-filter-converter_smart_path*
 unite-filter-converter_tail	unite.txt	/*unite-filter-converter_tail*
 unite-filter-converter_tail_abbr	unite.txt	/*unite-filter-converter_tail_abbr*
+unite-filter-converter_uniq_word	unite.txt	/*unite-filter-converter_uniq_word*
+unite-filter-converter_word_abbr	unite.txt	/*unite-filter-converter_word_abbr*
 unite-filter-matcher_context	unite.txt	/*unite-filter-matcher_context*
 unite-filter-matcher_default	unite.txt	/*unite-filter-matcher_default*
 unite-filter-matcher_fuzzy	unite.txt	/*unite-filter-matcher_fuzzy*

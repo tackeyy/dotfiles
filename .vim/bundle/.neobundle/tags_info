@@ -6,4 +6,5 @@ vim-browsereload-mac
 vim-endwise
 vim-indent-guides
 vim-rspec
+vim-rubocop
 vimfiler
