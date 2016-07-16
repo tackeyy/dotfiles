@@ -22,6 +22,7 @@ NeoBundle 'tell-k/vim-browsereload-mac' "browserのreload
 NeoBundle 'nathanaelkane/vim-indent-guides' "インデントの深さを可視化
 NeoBundle 'thoughtbot/vim-rspec' "rspec syntax
 NeoBundle 'ngmy/vim-rubocop' "rubocop
+NeoBundle 'tpope/vim-rails' "rails
 
 call neobundle#end()
 

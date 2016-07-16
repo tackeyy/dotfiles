@@ -5,6 +5,7 @@ unite.vim
 vim-browsereload-mac
 vim-endwise
 vim-indent-guides
+vim-rails
 vim-rspec
 vim-rubocop
 vimfiler
