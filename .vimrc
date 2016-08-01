@@ -23,6 +23,7 @@ NeoBundle 'nathanaelkane/vim-indent-guides' "インデントの深さを可視�
 NeoBundle 'thoughtbot/vim-rspec' "rspec syntax
 NeoBundle 'ngmy/vim-rubocop' "rubocop
 NeoBundle 'tpope/vim-rails' "rails
+NeoBundle 'szw/vim-tags' "ctags
 
 call neobundle#end()
 
@@ -48,6 +49,11 @@ set clipboard=unnamed "ヤンクした時にクリップボードに貼る
 set ignorecase "大文字/小文字の区別なく検索する
 set smartcase "検索文字列に大文字が含まれている場合は区別して検索する
 set wrapscan "検索時に最後まで行ったら最初に戻る
+
+"#####その他#######
+set history=1000 "検索履歴数をデフォルト(20件）から1000件にする
+set spell "スペルチェック
+nnoremap <C-]> g<C-]> " tagsジャンプの時に複数ある時は一覧表示
 
 autocmd BufWritePre * :%s/\s\+$//ge "ファイル保存時に行末の空白を自動削除
 autocmd QuickFixCmdPost *grep* cwindow "grep後にquickfix-windowを起動する
