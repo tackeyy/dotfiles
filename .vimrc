@@ -24,6 +24,9 @@ NeoBundle 'thoughtbot/vim-rspec' "rspec syntax
 NeoBundle 'ngmy/vim-rubocop' "rubocop
 NeoBundle 'tpope/vim-rails' "rails
 NeoBundle 'szw/vim-tags' "ctags
+NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'} "ステータスバー
+let g:Powerline_symbols = 'fancy'
+set laststatus=2
 
 call neobundle#end()
 
