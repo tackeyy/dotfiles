@@ -9,10 +9,8 @@
 
  call neobundle#begin(expand('~/.vim/bundle/'))
 
-" Let NeoBundle manage NeoBundle
   NeoBundleFetch 'Shougo/neobundle.vim'
 
-" インストールするプラグインをここに記述
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler' "ファイルをツリー表示
 NeoBundle 'alpaca-tc/vim-endwise.git' "Ruby if..end等を自動補完
@@ -26,6 +24,8 @@ NeoBundle 'tpope/vim-rails' "rails
 NeoBundle 'szw/vim-tags' "ctags
 NeoBundle 'kchmck/vim-coffee-script' "coffee script systax
 NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'} "ステータスバー
+NeoBundle 'slim-template/vim-slim'
+
 let g:Powerline_symbols = 'fancy'
 set laststatus=2
 
