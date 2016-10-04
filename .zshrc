@@ -1,0 +1,1 @@
+/Users/takita/dotfiles/.zshrc
