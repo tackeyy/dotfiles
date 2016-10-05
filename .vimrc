@@ -12,19 +12,21 @@
   NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/vimfiler' "ファイルをツリー表示
 NeoBundle 'alpaca-tc/vim-endwise.git' "Ruby if..end等を自動補完
-NeoBundle 'scrooloose/syntastic.git' "syntaxチェッカー
 NeoBundle "ctrlpvim/ctrlp.vim" "ファイル検索
 NeoBundle 'tell-k/vim-browsereload-mac' "browserのreload
 NeoBundle 'nathanaelkane/vim-indent-guides' "インデントの深さを可視化
-NeoBundle 'thoughtbot/vim-rspec' "rspec syntax
 NeoBundle 'ngmy/vim-rubocop' "rubocop
-NeoBundle 'tpope/vim-rails' "rails
 NeoBundle 'szw/vim-tags' "ctags
-NeoBundle 'kchmck/vim-coffee-script' "coffee script systax
 NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'} "ステータスバー
-NeoBundle 'slim-template/vim-slim'
+NeoBundle 'tpope/vim-rails' "rails
+NeoBundle 'scrooloose/syntastic.git' "syntaxチェッカー
+NeoBundle 'kchmck/vim-coffee-script' "coffee script systax
+NeoBundle 'thoughtbot/vim-rspec' "rspec syntax
+NeoBundle 'slim-template/vim-slim' "slim syntax
+NeoBundle 'othree/html5.vim' "html5 syntax
 
 let g:Powerline_symbols = 'fancy'
 set laststatus=2
@@ -33,6 +35,9 @@ call neobundle#end()
 
 " ファイルタイプ別のプラグイン/インデントを有効にする
 filetype plugin indent on
+
+" 未インストールのpluginをチェック
+" NeoBundleCheck
 
 " NeoBundleCheck vim起動時に未インストールのプラグインを通知する
 
@@ -50,6 +55,13 @@ set smartindent "改行時に入力された行の末尾に合わせて次の行
 set clipboard=unnamed "ヤンクした時にクリップボードに貼る
 set display=lastline "1行の文字数に関係なく文字列を表示する
 set colorcolumn=80 "80行目に縦線入れる
+
+" 閉じタグ補完
+augroup MyXML
+  autocmd!
+  autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
+  autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
+augroup END
 
 "#####検索設定#####
 set ignorecase "大文字/小文字の区別なく検索する
