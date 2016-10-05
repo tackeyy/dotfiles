@@ -26,6 +26,10 @@ case ${UID} in
     ;;
 esac
 
+# aliases
+#
+alias be='bundle exec'
+
 # auto change directory
 #
 setopt auto_cd
