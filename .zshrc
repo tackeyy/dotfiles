@@ -77,6 +77,10 @@ HISTSIZE=50000
 SAVEHIST=50000
 setopt hist_ignore_dups     # ignore duplication command history list
 setopt share_history        # share command history data
+setopt hist_ignore_space    # ignore history which start space
+setopt hist_ignore_all_dups # ignore dupulicate history
+setopt hist_reduce_blanks   # trim space
+setopt hist_find_no_dups    # exclude duplicate history in finding
 
 ## Completion configuration
 #
