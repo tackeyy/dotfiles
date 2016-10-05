@@ -10,14 +10,14 @@ export LANG=ja_JP.UTF-8
 #
 case ${UID} in
 0)
-    PROMPT=$'%{\e[32m%}%U%m{%n}%%%{\e[m%}%u '
+    PROMPT=$'%{\e[37m%}%m@%n\e[m%}%b '
     PROMPT2=$'%B%{\e[31m%}%_#%{\e[m%}%b '
     SPROMPT=$'%B%{\e[31m%}%r is correct? [n,y,a,e]:%{\e[m%}%b '
     [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
         PROMPT=$'%{\e[37m%}${HOST%%.*} ${PROMPT}'
     ;;
 *)
-    PROMPT=$'%{\e[32m%}%U%m{%n}%%%{\e[m%}%u '
+    PROMPT=$'%{\e[37m%}%m@%n\e[m%}%b '
     RPROMPT=$'%{\e[32m%}%/%%%{\e[m%} '
     RPROMPT2=$'%{\e[32m%}%_%%%{\e[m%} '
     SPROMPT=$'%{\e[32m%}%r is correct? [n,y,a,e]:%{\e[m%} '
