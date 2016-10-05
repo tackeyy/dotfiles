@@ -1,0 +1,9 @@
+# directries
+/.vim/*
+
+# files
+*.swp
+*.sh
+
+# exclude files or directries
+!*.toml
