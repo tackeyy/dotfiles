@@ -1,37 +1,60 @@
-## Environment variable configuration
+# Environment variable configuration
 #
 # LANG
 #
 export LANG=ja_JP.UTF-8
 
-## Default shell configuration
+# PostgreSQL
+#
+export PGDATA=/usr/local/var/postgres
+
+# Default shell configuration
 #
 # set prompt
 #
+
 case ${UID} in
 0)
-    PROMPT='[%n@%m]# '
-    RPROMPT='[%d]'
+    PROMPT='%F{green}[%n@%m %d]'
     SPROMPT=$'%B%{\e[31m%}%r is correct? [n,y,a,e]:%{\e[m%}%b '
     [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
         PROMPT=$'%{\e[37m%}${HOST%%.*} ${PROMPT}'
     ;;
 *)
-    PROMPT='[%n@%m]# '
-    RPROMPT='[%d]'
-    SPROMPT=$'%{\e[32m%}%r is correct? [n,y,a,e]:%{\e[m%} '
+    PROMPT='[%n@%m %d]'
     [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
         PROMPT=$'%{\e[37m%}${HOST%%.*} ${PROMPT}'
     ;;
 esac
 
-# aliases
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+zstyle ':vcs_info:*' formats " %F{green}%c%u[%b]%f"
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+precmd () { vcs_info }
+PROMPT=$PROMPT'${vcs_info_msg_0_}$ '
+
+## aliases
 #
 alias be='bundle exec'
+alias ls='ls -G'
+alias ll='ls -l'
+alias vimrc='vim ~/.vimrc'
+alias zshrc='vim ~/.zshrc'
+alias vf='vim +VimFiler'
+alias ip_address='ipconfig getifaddr en0'
+
+## set collor and alias
+#
+alias gls="gls --color"
+
 
 # auto change directory
 #
-setopt auto_cd
+# setopt auto_cd
 
 # auto directory pushd that you can get dirs list by cd -[tab]
 #
@@ -48,6 +71,10 @@ setopt list_packed
 # no beep sound when complete list displayed
 #
 setopt nolistbeep
+
+# no beep
+#
+setopt no_beep
 
 ## Keybind configuration
 #
@@ -66,8 +93,8 @@ bindkey "^N" history-beginning-search-forward-end
 
 # predict search
 #
-autoload predict-on
-predict-on
+# autoload predict-on
+# predict-on
 
 ## Command history configuration
 #
@@ -85,11 +112,6 @@ setopt hist_find_no_dups    # exclude duplicate history in finding
 #
 autoload -U compinit
 compinit
-
-## set collor and alias
-#
-alias ls="ls -G"
-alias gls="gls --color"
 
 case "${TERM}" in
 kterm*|xterm*)

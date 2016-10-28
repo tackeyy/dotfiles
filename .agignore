@@ -1,0 +1,17 @@
+*.swp
+*.bak
+*.old
+*.map
+*.min.css
+*.min.css.scss
+*.min.js
+jquery-*.js
+jquery.*.js
+tmp
+old
+log
+.git
+node_modules
+tags
+vendor
+images

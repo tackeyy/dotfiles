@@ -1,8 +1,9 @@
 [core]
 	excludesfile = /Users/takita/.gitignore_global
+	editor = vim -c \"set fenc=utf-8\"
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -14,4 +15,8 @@
 
 [alias]
   co = checkout
-
+  br = branch
+  delete-merged-local-branches = !git branch --merged | grep -v -e 'master' -e 'develop' | xargs git branch --delete %
+  delete-local-branches = !git branch | grep -v -e 'master' -e 'develop' | xargs git branch -D %
+[url "git@github.com:"]
+	pushinsteadof = https://github.com/
