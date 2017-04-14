@@ -49,9 +49,6 @@ set clipboard=unnamed                       " ヤンクした時にクリップ�
 set display=lastline                        " 1行の文字数に関係なく文字列を表示する
 set cc=81                                   " 81文字目に縦線を入れる "
 
-" ESCでIMEを確実にOFF
-inoremap <ESC> <ESC>:set iminsert=0<CR>
-
 " 検索
 set ignorecase                              " 大文字/小文字の区別なく検索する
 set smartcase                               " 検索文字列に大文字が含まれている場合は区別して検索する
@@ -66,6 +63,7 @@ set nobackup                                " ファイル保存時にバック�
 set noswapfile                              " ファイル編集中にスワップファイルを作らない
 set autoread                                " 外部でファイルに変更がされた場合は読みなおす
 autocmd QuickFixCmdPost *grep* cwindow      " grep後にquickfix-windowを起動する
+autocmd BufWritePre * :%s/\s\+$//ge         " ファイル保存時に行末の空白を自動削除
 
 " --------------------------------
 " Shougo/unite.vim
