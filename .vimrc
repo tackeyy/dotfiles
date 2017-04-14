@@ -15,8 +15,8 @@ endif
 
 if dein#load_state(expand(s:dein_dir))
   " toms files
-  let s:toml = '~/dein.toml'
-  let s:lazy_toml = '~/dein_lazy.toml'
+  let s:toml = '~/.dein.toml'
+  let s:lazy_toml = '~/.dein_lazy.toml'
 
   call dein#begin(expand('~/.vim/dein'), [$MYVIMRC,s:toml])
 
