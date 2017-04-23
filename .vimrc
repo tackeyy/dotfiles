@@ -88,10 +88,30 @@ endif
 nnoremap <silent> <Space>vf  :VimFiler<CR>
 
 " --------------------------------
-" rubocop
+" syntastic
 " --------------------------------
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntasticmodemap = { 'mode': 'active', 'active_filetypes': [
+  \ 'ruby', 'javascript','coffee', 'scss', 'html', 'haml', 'slim', 'sh',
+  \ 'spec', 'vim', 'zsh', 'sass', 'eruby'] }
+
+let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_coffee_checkers = ['coffeelint']
+let g:syntastic_scss_checkers = ['scss_lint']
 let g:syntastic_ruby_checkers = ['rubocop']
+
+let g:syntastic_error_symbol='✗'
+let g:syntastic_style_error_symbol = '✗'
+let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_style_warning_symbol = '⚠'
 
 " -------------------------------
 " soramugi/auto-ctags.vim
@@ -117,6 +137,19 @@ function! s:my_cr_function()
   return pumvisible() ? "\<C-y>" : "\<CR>"
 endfunction
 
+" Define dictionary.
+let g:neocomplete#sources#dictionary#dictionaries = {
+    \ 'default' : '',
+    \ 'vimshell' : $HOME.'/.vimshell_hist',
+    \ 'scheme' : $HOME.'/.gosh_completions'
+        \ }
+
+" Define keyword.
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+
 " --------------------------------
 " vim-monster
 " --------------------------------
@@ -125,12 +158,6 @@ let g:monster#completion#rcodetools#backend = "async_rct_complete"
 
 " With neocomplete.vim
 let g:neocomplete#sources#omni#input_patterns = {
-\   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
-\}
-
-" With deoplete.nvim
-let g:monster#completion#rcodetools#backend = "async_rct_complete"
-let g:deoplete#sources#omni#input_patterns = {
 \   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
 \}
 
@@ -148,6 +175,7 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 " vim-airline
 " --------------------------------
 set laststatus=2
+let g:airline#extensions#syntastic#enabled = 1
 
 " --------------------------------
 " alvan/vim-closetag
@@ -158,3 +186,8 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.erb"
 " iberianpig/tig-explorer.vim
 " --------------------------------
 nnoremap <Space>t :TigOpenProjectRootDir<CR>
+
+" --------------------------------
+" vim-browsereload-mac
+" --------------------------------
+nnoremap <Space>r :ChromeReload<CR>

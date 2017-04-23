@@ -57,7 +57,7 @@ repo = 'rking/ag.vim'
 repo = 'tell-k/vim-browsereload-mac'
 
 [[plugins]]
-repo = 'scrooloose/syntastic'
+repo = 'vim-syntastic/syntastic'
 
 [[plugins]]
 repo = 'szw/vim-tags'
