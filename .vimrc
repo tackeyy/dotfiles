@@ -82,6 +82,11 @@ if executable('ag')
   let g:unite_source_grep_recursive_opt = ''
 endif
 
+autocmd FileType unite call s:unite_my_settings()
+function! s:unite_my_settings()"{{{
+  nmap <buffer> <ESC> <Plug>(unite_exit)
+endfunction"}}}
+
 " --------------------------------
 " Shougo/vimfiler.vim
 " --------------------------------
