@@ -57,15 +57,18 @@ repo = 'rking/ag.vim'
 repo = 'tell-k/vim-browsereload-mac'
 
 [[plugins]]
-repo = 'vim-syntastic/syntastic'
-
-[[plugins]]
 repo = 'szw/vim-tags'
 
 [[plugins]]
 repo = 'vim-ruby/vim-ruby'
 
+[[plugins]]
+repo = 'iberianpig/tig-explorer.vim'
+
 # syntax
+[[plugins]]
+repo = 'vim-syntastic/syntastic'
+
 [[plugins]]
 repo = 'cespare/vim-toml'
 
@@ -94,7 +97,10 @@ repo = 'pangloss/vim-javascript'
 repo = 'mxw/vim-jsx'
 
 [[plugins]]
-repo = 'iberianpig/tig-explorer.vim'
+repo = 'posva/vim-vue'
+
+[[plugins]]
+repo = 'mxw/vim-jsx'
 
 # 静的解析
 [[plugins]]
