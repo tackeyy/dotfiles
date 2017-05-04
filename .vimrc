@@ -196,3 +196,8 @@ nnoremap <Space>t :TigOpenProjectRootDir<CR>
 " vim-browsereload-mac
 " --------------------------------
 nnoremap <Space>r :ChromeReload<CR>
+
+" --------------------------------
+" mxw/vim-jsx
+" --------------------------------
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
