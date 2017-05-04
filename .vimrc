@@ -56,7 +56,6 @@ set wrapscan                                " 検索時に最後まで行った�
 
 " その他
 set history=5000                            " 検索履歴数をデフォルト(20件）から1000件にする
-set spell                                   " スペルチェック
 set visualbell t_vb=                        " ビープ音すべてを無効にする
 set noerrorbells                            " エラーメッセージの表示時にビープを鳴らさない
 set nobackup                                " ファイル保存時にバックアップファイルを作らない
