@@ -102,6 +102,9 @@ repo = 'posva/vim-vue'
 [[plugins]]
 repo = 'mxw/vim-jsx'
 
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+
 # 静的解析
 [[plugins]]
 repo = 'scrooloose/syntastic'
