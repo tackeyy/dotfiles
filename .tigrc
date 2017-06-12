@@ -1,0 +1,17 @@
+# 行数表示をON
+set blob-view-line-number = yes
+set blame-view-line-number = yes
+
+# main view の左端にコミットIDを表示する
+set main-view = date author id commit-title:graph=yes,refs=yes
+
+# g をファイル先頭に移動に変更、 view-grep を再割当て
+bind generic g      move-first-line
+bind generic E      view-grep
+
+# G でファイル末尾に移動 (default: :toggle commit-title-graph)
+bind generic G      move-last-line
+bind main    G      move-last-line
+
+# Alt-g で :toggle commit-title-graph
+bind main    <Esc>g :toggle commit-title-graph
