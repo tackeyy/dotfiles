@@ -86,6 +86,17 @@ function! s:unite_my_settings()"{{{
   nmap <buffer> <ESC> <Plug>(unite_exit)
 endfunction"}}}
 
+" ファイル作成時にフォルダも作成する
+augroup vimrc-auto-mkdir  " {{{
+  autocmd!
+  autocmd BufWritePre * call s:auto_mkdir(expand('<afile>:p:h'))
+  function! s:auto_mkdir(dir)  " {{{
+    if !isdirectory(a:dir)
+      call mkdir(iconv(a:dir, &encoding, &termencoding), 'p')
+    endif
+  endfunction  " }}}
+augroup END  " }}}
+
 " --------------------------------
 " Shougo/vimfiler.vim
 " --------------------------------
@@ -201,3 +212,9 @@ nnoremap <Space>r :ChromeReload<CR>
 " mxw/vim-jsx
 " --------------------------------
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
+" --------------------------------
+" ruby-formatter/rufo-vim
+" --------------------------------
+" Enable rufo (RUby FOrmat)
+let g:rufo_auto_formatting = 1
