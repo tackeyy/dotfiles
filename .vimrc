@@ -218,3 +218,21 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 " --------------------------------
 " Enable rufo (RUby FOrmat)
 let g:rufo_auto_formatting = 1
+
+" --------------------------------
+" tpope/vim-pathogen
+" --------------------------------
+execute pathogen#infect()
+
+" --------------------------------
+" sekel/vim-vue-syntastic
+" --------------------------------
+let g:syntastic_vue_checkers = ['eslint']
+let local_eslint = finddir('node_modules', '.;') . '/.bin/eslint'
+if matchstr(local_eslint, "^\/\\w") == ''
+    let local_eslint = getcwd() . "/" . local_eslint
+endif
+if executable(local_eslint)
+    let g:syntastic_javascript_eslint_exec = local_eslint
+    let g:syntastic_vue_eslint_exec = local_eslint
+endif

@@ -115,6 +115,13 @@ repo = 'scrooloose/syntastic'
 [[plugins]]
 repo = 'ngmy/vim-rubocop'
 
+[[plugins]]
+repo = 'sekel/vim-vue-syntastic'
+
 # Formatter
 [[plugins]]
 repo = 'ruby-formatter/rufo-vim'
+
+# Utilities
+[[plugins]]
+repo = 'tpope/vim-pathogen'
