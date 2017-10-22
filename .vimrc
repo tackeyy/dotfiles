@@ -45,7 +45,7 @@ set tabstop=2                               " インデントをスペース2つ
 set autoindent                              " オートインデント
 set number                                  " 行番号を表示
 set smartindent                             " 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
-set clipboard=unnamed                       " ヤンクした時にクリップボードに貼る
+set clipboard=unnamedplus                   " ヤンクした時にクリップボードに貼る
 set display=lastline                        " 1行の文字数に関係なく文字列を表示する
 set cc=81                                   " 81文字目に縦線を入れる "
 
