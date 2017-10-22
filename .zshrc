@@ -164,7 +164,7 @@ esac
 # FRAMEWORK
 #
 
-export ZPLUG_HOME=/usr/local/opt/zplug
+export ZPLUG_HOME=~/.zplug
 source $ZPLUG_HOME/init.zsh
 
 # plugins
