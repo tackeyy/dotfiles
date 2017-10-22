@@ -20,3 +20,5 @@
   delete-local-branches = !git branch | grep -v -e 'master' -e 'develop' | xargs git branch -D %
 [url "git@github.com:"]
 	pushinsteadof = https://github.com/
+[push]
+	default = matching
