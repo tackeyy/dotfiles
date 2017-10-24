@@ -1,6 +1,6 @@
 # 行数表示をON
-set blob-view-line-number = yes
-set blame-view-line-number = yes
+set blob-view  = line-number:yes,interval=5 text
+set blame-view = date:default author:full file-name:auto id:yes,color line-number:no,interval=5 text
 
 # main view の左端にコミットIDを表示する
 set main-view = date author id commit-title:graph=yes,refs=yes
