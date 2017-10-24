@@ -217,7 +217,7 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 " ruby-formatter/rufo-vim
 " --------------------------------
 " Enable rufo (RUby FOrmat)
-let g:rufo_auto_formatting = 1
+let g:rufo_auto_formatting = 0
 
 " --------------------------------
 " tpope/vim-pathogen
