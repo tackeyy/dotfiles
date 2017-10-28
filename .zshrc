@@ -4,9 +4,28 @@
 #
 export LANG=ja_JP.UTF-8
 
+# PATH
+#
+export PATH="/usr/local/bin:$PATH"
+
 # PostgreSQL
 #
 export PGDATA=/usr/local/var/postgres
+
+# Initialization
+#
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# goenv
+export PATH="$HOME/.goenv/bin:$PATH"
+eval "$(goenv init -)"
 
 # Default shell configuration
 #
