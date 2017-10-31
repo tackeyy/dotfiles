@@ -122,6 +122,7 @@ let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_coffee_checkers = ['coffeelint']
 let g:syntastic_scss_checkers = ['scss_lint']
 let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_haml_checkers = ['haml_lint']
 
 let g:syntastic_error_symbol='✗'
 let g:syntastic_style_error_symbol = '✗'
