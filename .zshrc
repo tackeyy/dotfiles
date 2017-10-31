@@ -178,6 +178,15 @@ kterm*|xterm)
     ;;
 esac
 
+# Tmux
+#
+
+if [[ -z "$TMUX" ]]
+then
+  tmux new-session;
+  exit;
+fi
+
 # Plugins configuration
 #
 # FRAMEWORK
