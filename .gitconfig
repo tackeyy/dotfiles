@@ -1,5 +1,5 @@
 [core]
-	excludesfile = /Users/takita/.gitignore_global
+	excludesfile = /Users/tackeyy/.gitignore_global
 	editor = vim -c \"set fenc=utf-8\"
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -11,7 +11,7 @@
 
 [user]
 	name = tackeyy
-	email = mailto.takita.yusuke@gmail.com
+	email = takitayy@gmail.com
 
 [alias]
   co = checkout
