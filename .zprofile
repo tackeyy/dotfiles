@@ -1,6 +1,3 @@
-# nodebrew
-# export PATH=$HOME/.nodebrew/current/bin:$PATH
-
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
@@ -10,6 +7,12 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# goenv
-export PATH="$HOME/.goenv/bin:$PATH"
-eval "$(goenv init -)"
+case ${OSTYPE} in
+  # macOS
+  darwin*)
+    source ~/.zprofile.macos
+    ;;
+  linux*)
+    source ~/.zprofile.linuxos
+    ;;
+esac

@@ -1,0 +1,2 @@
+echo "linux"
+bind-key -t copy-mode y send -X copy-pipe-and-cancel "xsel -ip && xsel -op | xsel -ib"
