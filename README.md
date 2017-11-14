@@ -17,3 +17,4 @@ if you use Ubuntu and get error like ` dotfiles_link.sh: 2: dotfiles_link.sh: Sy
 ## TODO
 
 - [ ] dein.vim install script in vimrc
+- [ ] copy in copy mode at tmux on Ubuntu

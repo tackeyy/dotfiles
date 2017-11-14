@@ -14,7 +14,7 @@ case ${OSTYPE} in
   source ~/.zshrc.macos
   ;;
   linux*)
-  ¦ source ~/.zshrc.linuxos
+  source ~/.zshrc.linux
   ;;
 esac
 
