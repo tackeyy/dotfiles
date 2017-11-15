@@ -108,6 +108,9 @@ repo = 'vim-ruby/vim-ruby'
 [[plugins]]
 repo = 'wavded/vim-stylus'
 
+[[plugins]]
+repo = 'chr4/nginx.vim'
+
 # 静的解析
 [[plugins]]
 repo = 'scrooloose/syntastic'
