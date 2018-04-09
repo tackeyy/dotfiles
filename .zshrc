@@ -61,6 +61,10 @@ alias ip_address='ipconfig getifaddr en0'
 #
 alias gls="gls --color"
 
+## set wild card opt
+#
+setopt nonomatch
+
 # auto change directory
 #
 # setopt auto_cd

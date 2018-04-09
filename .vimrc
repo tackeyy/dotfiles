@@ -45,7 +45,7 @@ set tabstop=2                                " インデントをスペース2�
 set autoindent                               " オートインデント
 set number                                   " 行番号を表示
 set smartindent                              " 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
-set clipboard=unnamedplus,autoselect,unnamed " ヤンクした時にクリップボードに貼る
+set clipboard=unnamed " ヤンクした時にクリップボードに貼る
 set display=lastline                         " 1行の文字数に関係なく文字列を表示する
 set cc=81                                    " 81文字目に縦線を入れる "
 
@@ -131,6 +131,8 @@ let g:syntastic_coffee_checkers = ['coffeelint']
 let g:syntastic_scss_checkers = ['scss_lint']
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_haml_checkers = ['haml_lint']
+
+let g:syntastic_ruby_rubocop_exe = 'bundle exec rubocop'
 
 let g:syntastic_error_symbol='✗'
 let g:syntastic_style_error_symbol = '✗'
