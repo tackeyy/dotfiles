@@ -47,9 +47,6 @@ repo = 'Shougo/neomru.vim'
 repo = 'Shougo/unite.vim'
 
 [[plugins]]
-repo = 'soramugi/auto-ctags.vim'
-
-[[plugins]]
 repo = 'rking/ag.vim'
 
 # tool

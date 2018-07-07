@@ -140,12 +140,6 @@ let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_style_warning_symbol = '⚠'
 
 " -------------------------------
-" soramugi/auto-ctags.vim
-" -------------------------------
-let g:auto_ctags = 1
-let g:auto_ctags_directory_list = ['.git', '.svn']
-
-" -------------------------------
 " ctrlp.vim
 " -------------------------------
 let g:ctrlp_use_caching=0
