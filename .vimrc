@@ -72,13 +72,6 @@ augroup myfiletypes
   autocmd BufRead,BufNewFile *.ru set ft=ruby
 augroup END
 
-" --------------------------------
-" Shougo/unite.vim
-" --------------------------------
-let g:unite_enable_start_insert=1
-
-nmap <Space> [unite]
-
 " プロジェクト内でバッファと最近開いたファイル一覧を表示
 nnoremap <silent> [unite]f :<C-u>UniteWithProjectDir<Space>buffer file_mru<CR>
 
