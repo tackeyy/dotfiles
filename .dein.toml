@@ -67,9 +67,6 @@ repo = 'vim-syntastic/syntastic'
 repo = 'cespare/vim-toml'
 
 [[plugins]]
-repo = 'kchmck/vim-coffee-script'
-
-[[plugins]]
 repo = 'thoughtbot/vim-rspec'
 
 [[plugins]]
