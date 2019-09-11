@@ -1,0 +1,71 @@
+{
+    "git.autofetch": true,
+    "files.autoSave": "afterDelay",
+    "window.zoomLevel": 0,
+    "workbench.statusBar.visible": true,
+
+    // override default settings
+    "editor.formatOnPaste": true, // ペースト時に自動でフォーマット
+    // "editor.formatOnSave": true, // ファイル保存時に自動でフォーマット
+    "editor.formatOnType": true, // 入力した行を自動でフォーマット
+
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all", // 半角スペースを常に表示
+
+    "diffEditor.renderSideBySide": false, // Git の差分を行内に表示
+
+    "files.insertFinalNewline": true, // ファイルの保存時に最終行以降をトリミング
+    "files.trimTrailingWhitespace": true, // ファイルの保存時に行末の空白をトリミング
+
+    "window.openFoldersInNewWindow": "on", // 新規ワークスペースを別ウインドウで開く
+    "window.title": "${activeEditorMedium}${separator}${rootName}", // ウインドウ上部に表示する文字列の設定
+    "workbench.editor.labelFormat": "short", // タブに表示する文字列の設定
+    "workbench.editor.tabSizing": "shrink", // タブの表示設定
+    "workbench.startupEditor": "none", // Welcome Page を表示しない
+
+    // Vim
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j","j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>","d"],
+            "after": ["d", "d"]
+        },
+        {
+            "before":["<C-n>"],
+            "commands": [
+                ":nohl"
+            ]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys":{
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "workbench.iconTheme": "vscode-icons",
+    "git.confirmSync": false,
+
+    // Rubocop
+    "ruby.rubocop.executePath": "/Users/tackeyy/.rbenv/shims/",
+    "ruby.lint": {
+        "rubocop": true
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "files.trimFinalNewlines": true,
+}
