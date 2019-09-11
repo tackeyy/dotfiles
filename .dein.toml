@@ -44,9 +44,6 @@ repo = 'ctrlpvim/ctrlp.vim'
 repo = 'Shougo/neomru.vim'
 
 [[plugins]]
-repo = 'Shougo/unite.vim'
-
-[[plugins]]
 repo = 'rking/ag.vim'
 
 # tool
