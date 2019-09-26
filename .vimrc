@@ -1,6 +1,6 @@
 " dein.vim
 
-let s:dein_dir = expand('~/.vim/dein')
+let s:dein_dir = expand('~/.cache/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
 if !isdirectory(s:dein_dir)
@@ -18,7 +18,7 @@ if dein#load_state(expand(s:dein_dir))
   let s:toml = '~/.dein.toml'
   let s:lazy_toml = '~/.dein_lazy.toml'
 
-  call dein#begin(expand('~/.vim/dein'), [$MYVIMRC,s:toml])
+  call dein#begin(expand('~/.cache/dein'), [$MYVIMRC,s:toml])
 
   call dein#load_toml(s:toml)
   call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
