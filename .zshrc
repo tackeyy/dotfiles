@@ -8,6 +8,11 @@ export LANG=ja_JP.UTF-8
 #
 export PGDATA=/usr/local/var/postgres
 
+# Docker
+#
+export DOCKER_HOST=tcp://localhost:2375
+
+
 case ${OSTYPE} in
   # macOS
   darwin*)
