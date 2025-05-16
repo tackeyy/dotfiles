@@ -180,40 +180,43 @@ esac
 # Tmux
 #
 
-if [[ -z "$TMUX" ]]
-then
-  tmux new-session;
-  exit;
-fi
+# if [[ -z "$TMUX" ]]
+# then
+#   tmux new-session;
+#   exit;
+# fi
 
 # Plugins configuration
 #
 # FRAMEWORK
 #
 
-source $ZPLUG_HOME/init.zsh
-
-# plugins
+# M4でzplugが作動しなそうなのでzplugをやめる
+# source ~/.zplug/init.zsh
 #
-zplug "zplug/zplug"
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-autosuggestions"
-
-# Load the zsh-syntax-highlighting plugin
-if [ -f $ZPLUG_HOME/repos/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]
-then
-  source $ZPLUG_HOME/repos/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-  ZSH_HIGHLIGHT_STYLES[path]=none
-fi
-
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
-# Then, source plugins and add commands to $PATH
-zplug load --verbose
+# # plugins
+# #
+# zplug "zplug/zplug"
+# zplug "zsh-users/zsh-syntax-highlighting", defer:2
+# zplug "zsh-users/zsh-completions"
+# zplug "zsh-users/zsh-autosuggestions"
+#
+# # Load the zsh-syntax-highlighting plugin
+# if [ -f $ZPLUG_HOME/repos/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]
+# then
+#   source $ZPLUG_HOME/repos/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#   ZSH_HIGHLIGHT_STYLES[path]=none
+# fi
+#
+# # Install plugins if there are plugins that have not been installed
+# if ! zplug check --verbose; then
+#     printf "Install? [y/N]: "
+#     if read -q; then
+#         echo; zplug install
+#     fi
+# fi
+#
+# if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+#
+# # Then, source plugins and add commands to $PATH
+# zplug load --verbose

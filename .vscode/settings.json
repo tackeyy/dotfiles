@@ -68,4 +68,5 @@
         "editor.defaultFormatter": "vscode.html-language-features"
     },
     "files.trimFinalNewlines": true,
+    "terminal.integrated.shell.osx": "/bin/bash",
 }
